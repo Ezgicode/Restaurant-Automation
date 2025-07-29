@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Özelleşmiş Rapor</title>
+    <style>
+        body {
+            background-color: #fffaf7;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            font-size: 36px;
+            color: #333;
+            margin-top: 50px;
+        }
+
+        .rapor-button {
+            display: block;
+            width: 300px;
+            padding: 25px;
+            margin: 30px auto;
+            font-size: 24px;
+            background-color: #ff6666;
+            color: white;
+            border: none;
+            border-radius: 15px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .rapor-button:hover {
+            background-color: #e60000;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Lütfen Özelleşmiş Rapor Tipini  Seçiniz</h1>
+
+<form action="/masarapor" method="GET">
+    <button class="rapor-button" type="submit">Masa Bazlı Rapor</button>
+</form>
+
+<form action="/garsonrapor" method="GET">
+    <button class="rapor-button" type="submit">Garson Bazlı Rapor</button>
+</form>
+
+</body>
+</html>

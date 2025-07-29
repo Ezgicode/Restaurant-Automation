@@ -1,0 +1,33 @@
+
+{
+    "masalar": [
+        {
+            "id": 1,
+            "name": "masa1",
+            "garson_id": 1
+        },{
+            "id": 2,
+            "name": "masa2",
+            "garson_id": 1
+        },{
+            "id" : 3,
+            "name": "masa3",
+            "garson_id": 2
+        },{
+            "id": 4,
+            "name": "masa4",
+            "garson_id": 2
+        }
+    ],
+    "garsonlar": [
+        {
+            "id": 1,
+            "name": "garson1",
+            "qr_kod": 123
+        },{
+            "id": 2,
+            "name": "garson2",
+            "qr_kod": 234
+        }
+    ]
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+<h2> MASA BAZLI RAPOR</h2>
+
+    <style>
+
+         .masa-button {
+            font-size: 22px;
+            padding: 18px 35px;
+            background-color: #ff6666;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            margin-top: 50px;
+            transition: all 0.3s ease;
+        }
+
+        .masa-button:hover {
+            background-color: #e60000;
+        }
+    </style>
+
+</head>
+<body>
+<form action="/masarapor" method="POST">
+  <button  class= "masa-button" type="submit" name="masa" value="masa1">MASA 1</button>
+</form>
+<form action="/masarapor" method="POST">
+  <button  class= "masa-button" type="submit" name="masa" value="masa2">MASA 2</button>
+</form>
+<form action="/masarapor" method="POST">
+  <button class= "masa-button" type="submit" name="masa" value="masa3">MASA 3</button>
+</form>
+<form action="/masarapor" method="POST">
+  <button class= "masa-button" type="submit" name="masa" value="masa4">MASA 4</button>
+</form>
+
+
+<ul>
+    {% if masaraporlar %}
+    {% for satır in masaraporlar %}
+    <li> {{satır}}</li>
+        {% endfor %}
+    {% else %}
+
+    {% endif %}
+</ul></body>
+</html>

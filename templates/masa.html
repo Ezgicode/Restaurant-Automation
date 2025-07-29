@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Masa Seç</title>
+    <style>
+        body {
+            background-color: #ffefef;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding-top: 100px;
+        }
+
+        h2 {
+            font-size: 36px;
+            color: #222;
+        }
+
+        form {
+            display: inline-block;
+            margin: 20px;
+        }
+
+        input[type="submit"] {
+            padding: 40px 80px;
+            font-size: 24px;
+            background-color: indianred;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        .qr-button {
+            font-size: 22px;
+            padding: 18px 35px;
+            background-color: #ff6666;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            margin-top: 50px;
+            transition: all 0.3s ease;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Merhaba {{ garson_name }}</h1>
+    <h2>Lütfen ilgilendiğin masayı seç</h2>
+
+{% for masa in garson_masa %}
+    <form action="/masa" method="post">
+        <input type="hidden" name="masa_name" value=" {{ masa['name']}}">
+        <input type="submit" value="{{ masa['name'] }}" class = "qr_button">
+    </form>
+{% endfor %}
+

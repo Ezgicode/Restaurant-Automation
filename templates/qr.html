@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>QR Giriş</title>
+    <style>
+
+        body {
+            background-color: #ffefef;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding-top: 100px;
+        }
+
+        h2 {
+            font-size: 36px;
+            color: #222;
+        }
+        form {
+            margin-top: 30px;
+        }
+        input[type="text"] {
+            padding: 12px 20px;
+            font-size: 20px;
+            border-radius: 8px;
+            border: 1px solid #999;
+        }
+        input[type="submit"] {
+            margin-top: 20px;
+            padding: 12px 40px;
+            font-size: 20px;
+            background-color: indianred;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+
+<img src="{{ url_for('static', filename='why-is-it-important-to-customize-and-color-qr-codes-_800.jpeg') }}"
+     alt="banner"
+     tyle="width: 100%; border-radius: 10px;">
+
+
+    <h2>Lütfen QR Kodunuzu Girin</h2>
+    <form action="/qr" method="POST">
+        <input type="text" name="qr_kod" placeholder="QR Kodunuzu Giriniz">
+        <br>
+        <input type="submit" value="Giriş Yap">
+    </form>
+</body>
+</html>

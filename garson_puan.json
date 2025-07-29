@@ -1,0 +1,14 @@
+{
+    "garsonlar": [
+        {
+            "id": 1,
+            "name": "garson1",
+            "puan": 60
+        },
+        {
+            "id": 2,
+            "name": "garson2",
+            "puan": 80
+        }
+    ]
+}
